@@ -24,7 +24,7 @@ html {
 
 body {
   background-color: var(--Grey-100);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 a {
@@ -34,6 +34,8 @@ a {
 .container {
   display: grid;
   min-height: 100vh;
+  overflow-x: auto;
+  max-width: 1500px;
 }
 @media (max-width: 600px) {
   .container {
@@ -43,7 +45,7 @@ a {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 37.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-template-rows: repeat(2, auto);
   gap: 3rem;
   margin: auto;
